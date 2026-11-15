@@ -17,6 +17,16 @@
                             light: '#ff3355',
                             accent: '#121212'
                         }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'glow': 'glow 8s ease-in-out infinite alternate',
+                    },
+                    keyframes: {
+                        glow: {
+                            '0%': { transform: 'scale(1)', opacity: '0.15' },
+                            '100%': { transform: 'scale(1.2)', opacity: '0.3' },
+                        }
                     }
                 }
             }
@@ -24,7 +34,14 @@
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-black text-white font-sans antialiased selection:bg-brand selection:text-white">
+<body class="bg-black text-white font-sans antialiased selection:bg-brand selection:text-white relative overflow-x-hidden">
+
+    <!-- Animatsiyalangan Orqa Fon Nurlari -->
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+        <div class="absolute -top-40 -left-40 w-96 h-96 bg-brand/20 rounded-full blur-[120px] animate-glow"></div>
+        <div class="absolute top-1/2 -right-40 w-96 h-96 bg-rose-600/15 rounded-full blur-[140px] animate-glow" style="animation-delay: 4s;"></div>
+        <div class="absolute -bottom-40 left-1/3 w-96 h-96 bg-brand/15 rounded-full blur-[130px] animate-glow" style="animation-delay: 2s;"></div>
+    </div>
 
     <!-- Header / Navbar -->
     <header class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
@@ -45,8 +62,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-gradient-to-b from-zinc-950 via-black to-zinc-950">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-brand/20 via-transparent to-transparent blur-3xl pointer-events-none"></div>
+    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden z-10">
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
             <div class="space-y-6 text-center md:text-left">
                 <span class="inline-block bg-brand/10 text-brand border border-brand/30 text-xs font-semibold px-4 py-1.5 rounded-full uppercase tracking-widest">Zero Nicotine • Energy • Focus</span>
@@ -58,7 +74,7 @@
                 </p>
                 <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 pt-4">
                     <a href="#flavors" class="w-full sm:w-auto bg-brand hover:bg-brand-dark text-white font-bold px-8 py-4 rounded-full text-center transition shadow-xl shadow-brand/40 uppercase tracking-wider text-sm">Mahsulotlarni ko'rish</a>
-                    <a href="#about" class="w-full sm:w-auto bg-zinc-900 hover:bg-zinc-800 border border-white/10 text-white font-bold px-8 py-4 rounded-full text-center transition text-sm">Batafsil</a>
+                    <a href="#about" class="w-full sm:w-auto bg-zinc-900/80 hover:bg-zinc-800 border border-white/10 text-white font-bold px-8 py-4 rounded-full text-center transition text-sm">Batafsil</a>
                 </div>
             </div>
             <div class="flex justify-center relative">
@@ -70,28 +86,28 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-24 bg-zinc-950 border-t border-white/5">
+    <section id="about" class="py-24 bg-zinc-950/60 backdrop-blur-md border-t border-white/5 relative z-10">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto space-y-4 mb-16">
                 <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tight">Nima uchun aynan <span class="text-brand">Killa Pablo</span>?</h2>
                 <p class="text-gray-400 text-sm md:text-base">Tamakisiz toza energiya va yuqori darajadagi diqqat-fokus.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-zinc-900/50 border border-white/5 p-8 rounded-2xl hover:border-brand/50 transition group">
+                <div class="bg-zinc-900/40 border border-white/5 p-8 rounded-2xl hover:border-brand/50 transition group">
                     <div class="w-12 h-12 bg-brand/10 text-brand rounded-xl flex items-center justify-center text-xl mb-6 group-hover:bg-brand group-hover:text-white transition">
                         <i class="fa-solid fa-ban"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Zero Nicotine</h3>
                     <p class="text-gray-400 text-sm leading-relaxed">Tarkibida nikotin mutlaqo yo'q. Faqat toza kofein va tetiklik.</p>
                 </div>
-                <div class="bg-zinc-900/50 border border-white/5 p-8 rounded-2xl hover:border-brand/50 transition group">
+                <div class="bg-zinc-900/40 border border-white/5 p-8 rounded-2xl hover:border-brand/50 transition group">
                     <div class="w-12 h-12 bg-brand/10 text-brand rounded-xl flex items-center justify-center text-xl mb-6 group-hover:bg-brand group-hover:text-white transition">
                         <i class="fa-solid fa-bolt-lightning"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">100 mg Kofein</h3>
                     <p class="text-gray-400 text-sm leading-relaxed">Har bir porsiyada kuchli energiya zaryadi va uzoq muddatli tetiklik.</p>
                 </div>
-                <div class="bg-zinc-900/50 border border-white/5 p-8 rounded-2xl hover:border-brand/50 transition group">
+                <div class="bg-zinc-900/40 border border-white/5 p-8 rounded-2xl hover:border-brand/50 transition group">
                     <div class="w-12 h-12 bg-brand/10 text-brand rounded-xl flex items-center justify-center text-xl mb-6 group-hover:bg-brand group-hover:text-white transition">
                         <i class="fa-solid fa-box-archive"></i>
                     </div>
@@ -103,7 +119,7 @@
     </section>
 
     <!-- Flavors Section -->
-    <section id="flavors" class="py-24 bg-black">
+    <section id="flavors" class="py-24 bg-transparent relative z-10">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto space-y-4 mb-16">
                 <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tight">Mahsulot <span class="text-brand">Turlari</span></h2>
@@ -111,8 +127,8 @@
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                 <!-- 1. Frosted Mint -->
-                <div class="bg-zinc-950 border border-white/10 rounded-2xl p-6 text-center space-y-4 hover:border-brand transition">
-                    <div class="h-56 bg-zinc-900 rounded-xl overflow-hidden flex items-center justify-center">
+                <div class="bg-zinc-950/80 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center space-y-4 hover:border-brand transition">
+                    <div class="h-56 bg-zinc-900/80 rounded-xl overflow-hidden flex items-center justify-center">
                         <img src="IMG_2913.jpeg" alt="Frosted Mint" class="w-full h-full object-cover hover:scale-105 transition duration-300">
                     </div>
                     <h3 class="text-xl font-bold">Frosted Mint</h3>
@@ -120,8 +136,8 @@
                     <span class="inline-block text-brand font-black text-lg">120.000 so’m</span>
                 </div>
                 <!-- 2. Wintergreen -->
-                <div class="bg-zinc-950 border border-white/10 rounded-2xl p-6 text-center space-y-4 hover:border-brand transition">
-                    <div class="h-56 bg-zinc-900 rounded-xl overflow-hidden flex items-center justify-center">
+                <div class="bg-zinc-950/80 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center space-y-4 hover:border-brand transition">
+                    <div class="h-56 bg-zinc-900/80 rounded-xl overflow-hidden flex items-center justify-center">
                         <img src="IMG_2915.jpeg" alt="Wintergreen" class="w-full h-full object-cover hover:scale-105 transition duration-300">
                     </div>
                     <h3 class="text-xl font-bold">Wintergreen</h3>
@@ -129,8 +145,8 @@
                     <span class="inline-block text-brand font-black text-lg">120.000 so’m</span>
                 </div>
                 <!-- 3. Watermelon -->
-                <div class="bg-zinc-950 border border-white/10 rounded-2xl p-6 text-center space-y-4 hover:border-brand transition">
-                    <div class="h-56 bg-zinc-900 rounded-xl overflow-hidden flex items-center justify-center">
+                <div class="bg-zinc-950/80 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center space-y-4 hover:border-brand transition">
+                    <div class="h-56 bg-zinc-900/80 rounded-xl overflow-hidden flex items-center justify-center">
                         <img src="IMG_2916.jpeg" alt="Watermelon" class="w-full h-full object-cover hover:scale-105 transition duration-300">
                     </div>
                     <h3 class="text-xl font-bold">Watermelon</h3>
@@ -138,8 +154,8 @@
                     <span class="inline-block text-brand font-black text-lg">120.000 so’m</span>
                 </div>
                 <!-- 4. Pear -->
-                <div class="bg-zinc-950 border border-white/10 rounded-2xl p-6 text-center space-y-4 hover:border-brand transition">
-                    <div class="h-56 bg-zinc-900 rounded-xl overflow-hidden flex items-center justify-center">
+                <div class="bg-zinc-950/80 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center space-y-4 hover:border-brand transition">
+                    <div class="h-56 bg-zinc-900/80 rounded-xl overflow-hidden flex items-center justify-center">
                         <img src="IMG_2917.jpeg" alt="Pear" class="w-full h-full object-cover hover:scale-105 transition duration-300">
                     </div>
                     <h3 class="text-xl font-bold">Pear</h3>
@@ -147,8 +163,8 @@
                     <span class="inline-block text-brand font-black text-lg">120.000 so’m</span>
                 </div>
                 <!-- 5. Tropik punch -->
-                <div class="bg-zinc-950 border border-white/10 rounded-2xl p-6 text-center space-y-4 hover:border-brand transition">
-                    <div class="h-56 bg-zinc-900 rounded-xl overflow-hidden flex items-center justify-center">
+                <div class="bg-zinc-950/80 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center space-y-4 hover:border-brand transition">
+                    <div class="h-56 bg-zinc-900/80 rounded-xl overflow-hidden flex items-center justify-center">
                         <img src="IMG_2918.jpeg" alt="Tropik punch" class="w-full h-full object-cover hover:scale-105 transition duration-300">
                     </div>
                     <h3 class="text-xl font-bold">Tropik punch</h3>
@@ -156,8 +172,8 @@
                     <span class="inline-block text-brand font-black text-lg">120.000 so’m</span>
                 </div>
                 <!-- 6. Blue Raspberry -->
-                <div class="bg-zinc-950 border border-white/10 rounded-2xl p-6 text-center space-y-4 hover:border-brand transition">
-                    <div class="h-56 bg-zinc-900 rounded-xl overflow-hidden flex items-center justify-center">
+                <div class="bg-zinc-950/80 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center space-y-4 hover:border-brand transition">
+                    <div class="h-56 bg-zinc-900/80 rounded-xl overflow-hidden flex items-center justify-center">
                         <img src="IMG_2919.jpeg" alt="Blue Raspberry" class="w-full h-full object-cover hover:scale-105 transition duration-300">
                     </div>
                     <h3 class="text-xl font-bold">Blue Raspberry</h3>
@@ -169,9 +185,9 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-24 bg-zinc-950 border-t border-white/5">
+    <section id="contact" class="py-24 bg-zinc-950/80 backdrop-blur-md border-t border-white/5 relative z-10">
         <div class="max-w-3xl mx-auto px-6">
-            <div class="bg-black border border-white/10 p-8 md:p-12 rounded-3xl shadow-2xl space-y-8">
+            <div class="bg-black/90 border border-white/10 p-8 md:p-12 rounded-3xl shadow-2xl space-y-8">
                 <div class="text-center space-y-2">
                     <h2 class="text-3xl font-black uppercase tracking-tight">Buyurtma berish</h2>
                     <p class="text-gray-400 text-sm">Ma'lumotlaringizni qoldiring, tez orada siz bilan bog'lanamiz.</p>
@@ -189,7 +205,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 bg-black border-t border-white/10 text-center text-xs text-gray-500">
+    <footer class="py-8 bg-black border-t border-white/10 text-center text-xs text-gray-500 relative z-10">
         <p>&copy; 2026 Killa Pablo Energy Pouches. Barcha huquqlar himoyalangan.</p>
     </footer>
 
