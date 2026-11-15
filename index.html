@@ -17,16 +17,6 @@
                             light: '#ff3355',
                             accent: '#121212'
                         }
-                    },
-                    animation: {
-                        'pulse-slow': 'pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'glow': 'glow 8s ease-in-out infinite alternate',
-                    },
-                    keyframes: {
-                        glow: {
-                            '0%': { transform: 'scale(1)', opacity: '0.15' },
-                            '100%': { transform: 'scale(1.2)', opacity: '0.3' },
-                        }
                     }
                 }
             }
@@ -36,11 +26,12 @@
 </head>
 <body class="bg-black text-white font-sans antialiased selection:bg-brand selection:text-white relative overflow-x-hidden">
 
-    <!-- Animatsiyalangan Orqa Fon Nurlari -->
+    <!-- Orqa Fondagi Video -->
     <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-        <div class="absolute -top-40 -left-40 w-96 h-96 bg-brand/20 rounded-full blur-[120px] animate-glow"></div>
-        <div class="absolute top-1/2 -right-40 w-96 h-96 bg-rose-600/15 rounded-full blur-[140px] animate-glow" style="animation-delay: 4s;"></div>
-        <div class="absolute -bottom-40 left-1/3 w-96 h-96 bg-brand/15 rounded-full blur-[130px] animate-glow" style="animation-delay: 2s;"></div>
+        <video autoplay muted loop playsinline class="w-full h-full object-cover opacity-30">
+            <source src="AQNGtVeSqZVbvR5_XQzf9aQ..." type="video/mp4">
+        </video>
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-[2px]"></div>
     </div>
 
     <!-- Header / Navbar -->
@@ -69,7 +60,7 @@
                 <h1 class="text-5xl md:text-7xl font-black tracking-tight leading-none uppercase italic">
                     POWERED BY <br><span class="text-brand">ARMAN</span>
                 </h1>
-                <p class="text-gray-400 text-lg max-w-lg mx-auto md:mx-0">
+                <p class="text-gray-300 text-lg max-w-lg mx-auto md:mx-0 drop-shadow-md">
                     Killa Pablo energy pouches — tamakisi yo'q, 100 mg kofein va kuchli quvvat. Chegaralarni yengib o'ting!
                 </p>
                 <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 pt-4">
@@ -86,28 +77,28 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-24 bg-zinc-950/60 backdrop-blur-md border-t border-white/5 relative z-10">
+    <section id="about" class="py-24 bg-zinc-950/70 backdrop-blur-md border-t border-white/5 relative z-10">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto space-y-4 mb-16">
                 <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tight">Nima uchun aynan <span class="text-brand">Killa Pablo</span>?</h2>
                 <p class="text-gray-400 text-sm md:text-base">Tamakisiz toza energiya va yuqori darajadagi diqqat-fokus.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-zinc-900/40 border border-white/5 p-8 rounded-2xl hover:border-brand/50 transition group">
+                <div class="bg-zinc-900/60 border border-white/5 p-8 rounded-2xl hover:border-brand/50 transition group">
                     <div class="w-12 h-12 bg-brand/10 text-brand rounded-xl flex items-center justify-center text-xl mb-6 group-hover:bg-brand group-hover:text-white transition">
                         <i class="fa-solid fa-ban"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Zero Nicotine</h3>
                     <p class="text-gray-400 text-sm leading-relaxed">Tarkibida nikotin mutlaqo yo'q. Faqat toza kofein va tetiklik.</p>
                 </div>
-                <div class="bg-zinc-900/40 border border-white/5 p-8 rounded-2xl hover:border-brand/50 transition group">
+                <div class="bg-zinc-900/60 border border-white/5 p-8 rounded-2xl hover:border-brand/50 transition group">
                     <div class="w-12 h-12 bg-brand/10 text-brand rounded-xl flex items-center justify-center text-xl mb-6 group-hover:bg-brand group-hover:text-white transition">
                         <i class="fa-solid fa-bolt-lightning"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">100 mg Kofein</h3>
                     <p class="text-gray-400 text-sm leading-relaxed">Har bir porsiyada kuchli energiya zaryadi va uzoq muddatli tetiklik.</p>
                 </div>
-                <div class="bg-zinc-900/40 border border-white/5 p-8 rounded-2xl hover:border-brand/50 transition group">
+                <div class="bg-zinc-900/60 border border-white/5 p-8 rounded-2xl hover:border-brand/50 transition group">
                     <div class="w-12 h-12 bg-brand/10 text-brand rounded-xl flex items-center justify-center text-xl mb-6 group-hover:bg-brand group-hover:text-white transition">
                         <i class="fa-solid fa-box-archive"></i>
                     </div>
@@ -127,7 +118,7 @@
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                 <!-- 1. Frosted Mint -->
-                <div class="bg-zinc-950/80 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center space-y-4 hover:border-brand transition">
+                <div class="bg-zinc-950/85 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center space-y-4 hover:border-brand transition">
                     <div class="h-56 bg-zinc-900/80 rounded-xl overflow-hidden flex items-center justify-center">
                         <img src="IMG_2913.jpeg" alt="Frosted Mint" class="w-full h-full object-cover hover:scale-105 transition duration-300">
                     </div>
@@ -136,7 +127,7 @@
                     <span class="inline-block text-brand font-black text-lg">120.000 so’m</span>
                 </div>
                 <!-- 2. Wintergreen -->
-                <div class="bg-zinc-950/80 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center space-y-4 hover:border-brand transition">
+                <div class="bg-zinc-950/85 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center space-y-4 hover:border-brand transition">
                     <div class="h-56 bg-zinc-900/80 rounded-xl overflow-hidden flex items-center justify-center">
                         <img src="IMG_2915.jpeg" alt="Wintergreen" class="w-full h-full object-cover hover:scale-105 transition duration-300">
                     </div>
@@ -145,7 +136,7 @@
                     <span class="inline-block text-brand font-black text-lg">120.000 so’m</span>
                 </div>
                 <!-- 3. Watermelon -->
-                <div class="bg-zinc-950/80 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center space-y-4 hover:border-brand transition">
+                <div class="bg-zinc-950/85 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center space-y-4 hover:border-brand transition">
                     <div class="h-56 bg-zinc-900/80 rounded-xl overflow-hidden flex items-center justify-center">
                         <img src="IMG_2916.jpeg" alt="Watermelon" class="w-full h-full object-cover hover:scale-105 transition duration-300">
                     </div>
@@ -154,7 +145,7 @@
                     <span class="inline-block text-brand font-black text-lg">120.000 so’m</span>
                 </div>
                 <!-- 4. Pear -->
-                <div class="bg-zinc-950/80 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center space-y-4 hover:border-brand transition">
+                <div class="bg-zinc-950/85 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center space-y-4 hover:border-brand transition">
                     <div class="h-56 bg-zinc-900/80 rounded-xl overflow-hidden flex items-center justify-center">
                         <img src="IMG_2917.jpeg" alt="Pear" class="w-full h-full object-cover hover:scale-105 transition duration-300">
                     </div>
@@ -163,7 +154,7 @@
                     <span class="inline-block text-brand font-black text-lg">120.000 so’m</span>
                 </div>
                 <!-- 5. Tropik punch -->
-                <div class="bg-zinc-950/80 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center space-y-4 hover:border-brand transition">
+                <div class="bg-zinc-950/85 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center space-y-4 hover:border-brand transition">
                     <div class="h-56 bg-zinc-900/80 rounded-xl overflow-hidden flex items-center justify-center">
                         <img src="IMG_2918.jpeg" alt="Tropik punch" class="w-full h-full object-cover hover:scale-105 transition duration-300">
                     </div>
@@ -172,7 +163,7 @@
                     <span class="inline-block text-brand font-black text-lg">120.000 so’m</span>
                 </div>
                 <!-- 6. Blue Raspberry -->
-                <div class="bg-zinc-950/80 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center space-y-4 hover:border-brand transition">
+                <div class="bg-zinc-950/85 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center space-y-4 hover:border-brand transition">
                     <div class="h-56 bg-zinc-900/80 rounded-xl overflow-hidden flex items-center justify-center">
                         <img src="IMG_2919.jpeg" alt="Blue Raspberry" class="w-full h-full object-cover hover:scale-105 transition duration-300">
                     </div>
@@ -185,7 +176,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-24 bg-zinc-950/80 backdrop-blur-md border-t border-white/5 relative z-10">
+    <section id="contact" class="py-24 bg-zinc-950/85 backdrop-blur-md border-t border-white/5 relative z-10">
         <div class="max-w-3xl mx-auto px-6">
             <div class="bg-black/90 border border-white/10 p-8 md:p-12 rounded-3xl shadow-2xl space-y-8">
                 <div class="text-center space-y-2">
@@ -211,3 +202,4 @@
 
 </body>
 </html>
+
