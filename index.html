@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="uz" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Killa Pablo | Rebel Energy Drink</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            DEFAULT: '#ff0033',
+                            dark: '#cc0029',
+                            light: '#ff3355',
+                            accent: '#121212'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-black text-white font-sans antialiased selection:bg-brand selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <span class="text-2xl font-black tracking-wider text-brand italic">KILLA PABLO</span>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-300">
+                <a href="#about" class="hover:text-brand transition">Biz haqimizda</a>
+                <a href="#flavors" class="hover:text-brand transition">Ta'mlar</a>
+                <a href="#benefits" class="hover:text-brand transition">Afzalliklar</a>
+                <a href="#contact" class="hover:text-brand transition">Bog'lanish</a>
+            </nav>
+            <div>
+                <a href="#contact" class="bg-brand hover:bg-brand-dark text-white text-sm font-bold px-6 py-3 rounded-full transition shadow-lg shadow-brand/30">Buyurtma berish</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-gradient-to-b from-zinc-950 via-black to-zinc-950">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-brand/20 via-transparent to-transparent blur-3xl pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
+            <div class="space-y-6 text-center md:text-left">
+                <span class="inline-block bg-brand/10 text-brand border border-brand/30 text-xs font-semibold px-4 py-1.5 rounded-full uppercase tracking-widest">Yangi Energiya Manbai</span>
+                <h1 class="text-5xl md:text-7xl font-black tracking-tight leading-none uppercase italic">
+                    QOIDALARSIZ <br><span class="text-brand">ENERGIYA</span>
+                </h1>
+                <p class="text-gray-400 text-lg max-w-lg mx-auto md:mx-0">
+                    Killa Pablo — kuchli kofein, mukammal ta'm va tinimsiz harakat uchun yaratilgan zamonaviy energetik ichimlik. Chegaralarni yengib o'ting!
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 pt-4">
+                    <a href="#flavors" class="w-full sm:w-auto bg-brand hover:bg-brand-dark text-white font-bold px-8 py-4 rounded-full text-center transition shadow-xl shadow-brand/40 uppercase tracking-wider text-sm">Ta'mlarni ko'rish</a>
+                    <a href="#about" class="w-full sm:w-auto bg-zinc-900 hover:bg-zinc-800 border border-white/10 text-white font-bold px-8 py-4 rounded-full text-center transition text-sm">Batafsil</a>
+                </div>
+            </div>
+            <div class="flex justify-center relative">
+                <div class="w-72 h-[450px] bg-gradient-to-b from-brand to-zinc-900 rounded-3xl p-1 shadow-2xl shadow-brand/30 transform hover:scale-105 transition duration-500 flex flex-col justify-between items-center relative overflow-hidden group">
+                    <div class="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.1)_50%,transparent_75%)] bg-[length:250%_250%] animate-[pulse_4s_infinite]"></div>
+                    <div class="w-full p-6 text-center z-10">
+                        <span class="text-xs uppercase tracking-widest text-white/70 font-bold">Premium Energy</span>
+                    </div>
+                    <div class="z-10 text-center space-y-2">
+                        <i class="fa-solid fa-bolt text-6xl text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.8)]"></i>
+                        <h3 class="text-3xl font-black italic tracking-wider text-white">KILLA PABLO</h3>
+                        <p class="text-xs text-white/80 font-medium">ORIGINAL • 250 ML</p>
+                    </div>
+                    <div class="w-full p-6 text-center z-10">
+                        <div class="bg-black/40 backdrop-blur-sm rounded-full py-2 text-xs font-bold text-white tracking-widest">SUGAR FREE OPTION</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-zinc-950 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto space-y-4 mb-16">
+                <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tight">Nima uchun aynan <span class="text-brand">Killa Pablo</span>?</h2>
+                <p class="text-gray-400 text-sm md:text-base">Charchoqni unutish va diqqatni jamlash uchun eng yaxshi tanlov.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-zinc-900/50 border border-white/5 p-8 rounded-2xl hover:border-brand/50 transition group">
+                    <div class="w-12 h-12 bg-brand/10 text-brand rounded-xl flex items-center justify-center text-xl mb-6 group-hover:bg-brand group-hover:text-white transition">
+                        <i class="fa-solid fa-bolt-lightning"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Tezkor Energiya</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Birinchi qultumdayoq tetiklik baxsh etadi va kun bo'yi quvvatli yurishingizni ta'minlaydi.</p>
+                </div>
+                <div class="bg-zinc-900/50 border border-white/5 p-8 rounded-2xl hover:border-brand/50 transition group">
+                    <div class="w-12 h-12 bg-brand/10 text-brand rounded-xl flex items-center justify-center text-xl mb-6 group-hover:bg-brand group-hover:text-white transition">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Diqqat va Fokus</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed"> Tarkibidagi maxsus vitaminlar kompleksi miya faoliyatini rag'batlantiradi va diqqatni jamlaydi.</p>
+                </div>
+                <div class="bg-zinc-900/50 border border-white/5 p-8 rounded-2xl hover:border-brand/50 transition group">
+                    <div class="w-12 h-12 bg-brand/10 text-brand rounded-xl flex items-center justify-center text-xl mb-6 group-hover:bg-brand group-hover:text-white transition">
+                        <i class="fa-solid fa-fire"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Zo'r Ta'm</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Sun'iy ta'm ta'siridan holi bo'lgan mukammal muvozanatlashgan tetiklashtiruvchi ta'm.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flavors Section -->
+    <section id="flavors" class="py-24 bg-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto space-y-4 mb-16">
+                <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tight">Mahsulot <span class="text-brand">Turlari</span></h2>
+                <p class="text-gray-400">O'zingizga yoqqan ta'mni tanlang</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <!-- Flavor 1 -->
+                <div class="bg-zinc-950 border border-white/10 rounded-2xl p-6 text-center space-y-4 hover:border-brand transition">
+                    <div class="h-48 bg-gradient-to-b from-brand/20 to-transparent rounded-xl flex items-center justify-center">
+                        <i class="fa-solid fa-can-food text-5xl text-brand"></i>
+                    </div>
+                    <h3 class="text-xl font-bold">Original Classic</h3>
+                    <p class="text-gray-400 text-xs">Klassik kuch va tetiklik uyg'unligi.</p>
+                    <span class="inline-block text-brand font-black text-lg">12,000 UZS</span>
+                </div>
+                <!-- Flavor 2 -->
+                <div class="bg-zinc-950 border border-white/10 rounded-2xl p-6 text-center space-y-4 hover:border-brand transition">
+                    <div class="h-48 bg-gradient-to-b from-purple-500/20 to-transparent rounded-xl flex items-center justify-center">
+                        <i class="fa-solid fa-can-food text-5xl text-purple-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold">Berry Blast</h3>
+                    <p class="text-gray-400 text-xs">Mevali va o'tkir ta'm portlashi.</p>
+                    <span class="inline-block text-purple-400 font-black text-lg">12,000 UZS</span>
+                </div>
+                <!-- Flavor 3 -->
+                <div class="bg-zinc-950 border border-white/10 rounded-2xl p-6 text-center space-y-4 hover:border-brand transition">
+                    <div class="h-48 bg-gradient-to-b from-amber-500/20 to-transparent rounded-xl flex items-center justify-center">
+                        <i class="fa-solid fa-can-food text-5xl text-amber-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold">Tropical Mango</h3>
+                    <p class="text-gray-400 text-xs">Tropik mevalar shirinligi va quvvati.</p>
+                    <span class="inline-block text-amber-400 font-black text-lg">12,000 UZS</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-zinc-950 border-t border-white/5">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="bg-black border border-white/10 p-8 md:p-12 rounded-3xl shadow-2xl space-y-8">
+                <div class="text-center space-y-2">
+                    <h2 class="text-3xl font-black uppercase tracking-tight">Hamkorlik yoki Buyurtma</h2>
+                    <p class="text-gray-400 text-sm">Ma'lumotlaringizni qoldiring, tez orada siz bilan bog'lanamiz.</p>
+                </div>
+                <form class="space-y-4" onsubmit="event.preventDefault(); alert('Buyurtmangiz qabul qilindi! Tez orada aloqaga chiqamiz.');">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <input type="text" placeholder="Ismingiz" required class="bg-zinc-900 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand transition">
+                        <input type="tel" placeholder="Telefon raqamingiz" required class="bg-zinc-900 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand transition">
+                    </div>
+                    <textarea rows="4" placeholder="Xabaringiz yoki buyurtma soni..." class="w-full bg-zinc-900 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand transition"></textarea>
+                    <button type="submit" class="w-full bg-brand hover:bg-brand-dark text-white font-bold py-4 rounded-xl transition uppercase tracking-wider text-sm shadow-lg shadow-brand/30">Yuborish</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-black border-t border-white/10 text-center text-xs text-gray-500">
+        <p>&copy; 2026 Killa Pablo Energy Drink. Barcha huquqlar himoyalangan.</p>
+    </footer>
+
+</body>
+</html>
